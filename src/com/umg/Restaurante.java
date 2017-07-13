@@ -15,17 +15,21 @@ public class Restaurante {
     private boolean aceptaNinos;
     private int categoria;
 
-    private List<Comenzal> comenzales;
+    private List<Comensal> comenzales;
+
+    public List<Comensal> getComenzales() {
+        return comenzales;
+    }
 
     public Restaurante() {
         comenzales = new ArrayList<>();
     }
 
-    public void setComenzales(List<Comenzal> tmpSet) {
+    public void setComenzales(List<Comensal> tmpSet) {
         comenzales = tmpSet;
     }
 
-    public void anadirComenzal(Comenzal tempC) {
+    public void anadirComenzal(Comensal tempC) {
         comenzales.add(tempC);
     }
 
@@ -77,7 +81,7 @@ public class Restaurante {
         this.categoria = categoria;
     }
 
-    public Restaurante(String nombre, String direccion, int cantEmpleados, int cantMaxComenzales, boolean aceptaNinos, int categoria, List<Comenzal> comenzales) {
+    public Restaurante(String nombre, String direccion, int cantEmpleados, int cantMaxComenzales, boolean aceptaNinos, int categoria, List<Comensal> comenzales) {
         Nombre = nombre;
         Direccion = direccion;
         this.cantEmpleados = cantEmpleados;
@@ -95,11 +99,11 @@ public class Restaurante {
         return  resultado;
     }
 
-    public Comenzal clienteVIP(){
+    public Comensal clienteVIP(){
         int cantVisitas=0;
-        Comenzal vip= new Comenzal();
+        Comensal vip= new Comensal();
 
-        for (Comenzal c:comenzales
+        for (Comensal c:comenzales
              ) {
             if(c.getCantVisistas()>cantVisitas) {
                 cantVisitas=c.getCantVisistas();
@@ -108,5 +112,4 @@ public class Restaurante {
             }
         return vip;
         }
-
 }

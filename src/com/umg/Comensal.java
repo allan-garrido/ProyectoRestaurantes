@@ -3,7 +3,7 @@ package com.umg;
 /**
  * Created by ALLAN GARRIDO on 12/07/2017.
  */
-public class Comenzal {
+public class Comensal {
 
     private String nombre;
     private String apellidos;
@@ -33,11 +33,11 @@ public class Comenzal {
         this.cantVisistas = cantVisistas;
     }
 
-    public Comenzal() {
+    public Comensal() {
 
     }
 
-    public Comenzal(String nombre, String apellidos, int cantVisistas) {
+    public Comensal(String nombre, String apellidos, int cantVisistas) {
         this.nombre = nombre;
         this.apellidos = apellidos;
         this.cantVisistas = cantVisistas;
