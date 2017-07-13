@@ -76,4 +76,37 @@ public class Restaurante {
     public void setCategoria(int categoria) {
         this.categoria = categoria;
     }
+
+    public Restaurante(String nombre, String direccion, int cantEmpleados, int cantMaxComenzales, boolean aceptaNinos, int categoria, List<Comenzal> comenzales) {
+        Nombre = nombre;
+        Direccion = direccion;
+        this.cantEmpleados = cantEmpleados;
+        this.cantMaxComenzales = cantMaxComenzales;
+        this.aceptaNinos = aceptaNinos;
+        this.categoria = categoria;
+        this.comenzales = comenzales;
+
+        comenzales = new ArrayList<>();
+    }
+
+    public float calcularImpuesto(){
+        float resultado = categoria*cantMaxComenzales;
+        if(aceptaNinos) return  resultado/3;
+        return  resultado;
+    }
+
+    public Comenzal clienteVIP(){
+        int cantVisitas=0;
+        Comenzal vip= new Comenzal();
+
+        for (Comenzal c:comenzales
+             ) {
+            if(c.getCantVisistas()>cantVisitas) {
+                cantVisitas=c.getCantVisistas();
+                vip=c;
+            }
+            }
+        return vip;
+        }
+
 }

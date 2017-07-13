@@ -36,4 +36,12 @@ public class Comenzal {
     public Comenzal() {
 
     }
+
+    public Comenzal(String nombre, String apellidos, int cantVisistas) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.cantVisistas = cantVisistas;
+    }
+
+
 }
