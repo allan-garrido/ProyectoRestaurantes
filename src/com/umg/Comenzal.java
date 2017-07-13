@@ -1,7 +1,7 @@
 package com.umg;
 
 /**
- * Created by alumno on 12/07/2017.
+ * Created by ALLAN GARRIDO on 12/07/2017.
  */
 public class Comenzal {
 
